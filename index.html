@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Win $1000 Shopping Credit</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:#fff;
+    width:90%;
+    max-width:420px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#ff4b2b;
+    margin-bottom:10px;
+}
+
+p{
+    color:#555;
+    font-size:15px;
+}
+
+.badge{
+    background:#28a745;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:30px;
+    display:inline-block;
+    margin:15px 0;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+.footer{
+    font-size:12px;
+    color:#888;
+    margin-top:15px;
+}
+
+.block{
+    text-align:center;
+    font-family:Arial;
+    padding:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="mainContent">
+    <h1>🎉 Get $1000 to Spend!</h1>
+    <p>Limited time reward! Enter your details below to continue.</p>
+
+    <div class="badge">100% FREE ENTRY</div>
+
+    <form onsubmit="goOffer(); return false;">
+        <input type="email" required placeholder="Enter your email">
+        <input type="text" required placeholder="ZIP Code">
+        <button type="submit">Continue Now</button>
+    </form>
+
+    <div class="footer">
+        *This promotion is not affiliated with Walmart.<br>
+        Terms & Conditions apply.
+    </div>
+</div>
+
+<script>
+// 🔒 Android + USA only check
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.includes("android");
+var isUS = Intl.DateTimeFormat().resolvedOptions().timeZone.includes("America");
+
+if(!isAndroid || !isUS){
+    document.body.innerHTML = `
+        <div class="block">
+            <h2>❌ Access Restricted</h2>
+            <p>This offer is available for <b>Android users in the USA only</b>.</p>
+        </div>
+    `;
+}
+
+// CPA redirect
+function goOffer(){
+    window.location.href = "https://singingfiles.com/show.php?l=0&u=2458000&id=73520&tracking_id=Rk1";
+}
+</script>
+
+</body>
+</html>
